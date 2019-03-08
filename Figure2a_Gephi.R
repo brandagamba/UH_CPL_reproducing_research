@@ -44,6 +44,7 @@ get_xd_department = function(first_xd_year, department, limit_year)
 }
 
 # TODO: Make node degree dependant on natural log
+#nodes %>% mutate(degree = log1p(degree))
 
 write.csv(links, file = "Fig2a_Links.csv", row.names=F)
 nodes1 = nodes %>% mutate(xd_dept = get_xd_department(first_xd_year, dept, 1990))
